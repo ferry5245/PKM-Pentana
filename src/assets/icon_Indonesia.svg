@@ -1,0 +1,28 @@
+<svg width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#240;&#159;&#166;&#134; icon &#34;Indonesia&#34;">
+<g id="Mask group">
+<mask id="mask0_183_887" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="30">
+<g id="Group">
+<path id="Vector" d="M0 0H32.1667V30H0V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_183_887)">
+<g id="Group_2">
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M0 0V30H32.1667V0H0Z" fill="#F7FCFF"/>
+<g id="Mask group_2">
+<mask id="mask1_183_887" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="30">
+<g id="Group_3">
+<path id="Vector_3" fill-rule="evenodd" clip-rule="evenodd" d="M0 0V30H32.1667V0H0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask1_183_887)">
+<g id="Group_4">
+<path id="Vector_4" fill-rule="evenodd" clip-rule="evenodd" d="M0 0V15H32.1667V0H0Z" fill="#E31D1C"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>
