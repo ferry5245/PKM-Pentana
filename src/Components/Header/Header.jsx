@@ -5,9 +5,6 @@ import './Header.scss';
 import Logo from "../../assets/logo.png";
 
 function Header() {
-  // Get the username from local storage or another state management solution
-  const username = localStorage.getItem('username');
-
   return (
     <header className="header">
         <Link to="/"><img
