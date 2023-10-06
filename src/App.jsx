@@ -2,6 +2,7 @@ import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Tracking from "./Pages/Tracking/Tracking";
+import Smartboat from "./Pages/Smartboat/Smartboat";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tracking" element={<Tracking />} />
+        <Route path="/smartboat" element={<Smartboat />} />
       </Routes>
     </>
   );
