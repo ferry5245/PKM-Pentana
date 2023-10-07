@@ -9,6 +9,7 @@ import './SmartboatComp.scss'
 
 function SmartboatComp() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transition, setTransition] = useState("");
 
   const photos = [
     Smartboats1,
@@ -19,18 +20,31 @@ function SmartboatComp() {
   const handlePrevClick = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+      setTransition("transition-left");
+      setTimeout(() => {
+        setTransition("");
+      }, 500);
     }
   };
   
   const handleNextClick = () => {
     if (currentIndex < photos.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setTransition("transition-right");
+      setTimeout(() => {
+        setTransition("");
+      }, 500);
     }
   };  
-
+  
   return (
     <div className="smartboatcomps">
-      <img className="main-image" src={photos[currentIndex]} alt="Roadmap" />
+      <img 
+        className={transition} 
+        style={{ width:'100%' }}
+        src={photos[currentIndex]} 
+        alt="Roadmap" 
+      />
       <div className="button-container">
         <div className="button-box">
           {currentIndex !== 0 && 
@@ -40,11 +54,11 @@ function SmartboatComp() {
           }
         </div>
         <div className="button-box">
-        {currentIndex !== 2 && 
-          <a className="next" href='javascript:void(0)' onClick={handleNextClick}>
-            <img src={Next} alt="Next" />
-          </a>
-        }
+          {currentIndex !== 2 && 
+            <a className="next" href='javascript:void(0)' onClick={handleNextClick}>
+              <img src={Next} alt="Next" />
+            </a>
+          }
         </div>
       </div>
     </div>
