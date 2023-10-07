@@ -1,6 +1,6 @@
 import React from "react";
 import './Smartboat.scss'
-import Smartboats from "../../assets/smartboats.png";
+import SmartboatComp from "../../Components/SmartboatComp/SmartboatComp";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 
@@ -8,9 +8,8 @@ function Smartboat(){
     return(
         <div className="smartboat">
             <Header/>
-            <div className="smartboats">
-                <img src={ Smartboats } alt="Partner" />
-            </div>
+            <SmartboatComp/>
+            <div><hr className="line"/></div>
             <Footer/>
         </div>
     )

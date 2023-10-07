@@ -13,16 +13,10 @@
         line-height: normal;
         letter-spacing: 40px;
     }
-
-    .smartboats {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin: 4vh 0;
-        padding: -2vw 0;
-        
-        img {
-            width: 100%;
-        }
+    
+    .line {
+        width: 85%;
+        border-color: #000;
+        border-radius: 1px;
     }
 }
