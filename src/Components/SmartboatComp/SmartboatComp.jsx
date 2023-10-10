@@ -1,16 +1,14 @@
 // components/SmartboatComp/SmartboatComp.jsx
 import React, { useState } from 'react';
+import './SmartboatComp.scss';
 import Smartboats1 from '../../../src/assets/smartboats1.png';
 import Smartboats2 from '../../../src/assets/smartboats2.png';
 import Smartboats3 from '../../../src/assets/smartboats3.png';
 import Prev from '../../../src/assets/prev.png';
 import Next from '../../../src/assets/next.png';
-import './SmartboatComp.scss'
 
 function SmartboatComp() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [transition, setTransition] = useState("");
-
   const photos = [
     Smartboats1,
     Smartboats2,
@@ -18,47 +16,45 @@ function SmartboatComp() {
   ];
 
   const handlePrevClick = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setTransition("transition-left");
-      setTimeout(() => {
-        setTransition("");
-      }, 500);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
   };
-  
+
   const handleNextClick = () => {
-    if (currentIndex < photos.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-      setTransition("transition-right");
-      setTimeout(() => {
-        setTransition("");
-      }, 500);
-    }
-  };  
-  
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % photos.length);
+  };
+
   return (
     <div className="smartboatcomps">
-      <img 
-        className={transition} 
-        style={{ width:'100%' }}
-        src={photos[currentIndex]} 
-        alt="Roadmap" 
-      />
+      <div className="carousel-container">
+        <div className="carousel" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+          {photos.map((photo, index) => (
+            <div
+              key={index}
+              className="carousel-page"
+            >
+              <img
+                className="carousel-image"
+                src={photo}
+                alt={`Image ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="button-container">
         <div className="button-box">
-          {currentIndex !== 0 && 
-            <a className="prev" href='javascript:void(0)' onClick={handlePrevClick}>
+          {currentIndex !== 0 && (
+            <button className="prev" onClick={handlePrevClick}>
               <img src={Prev} alt="Previous" />
-            </a>
-          }
+            </button>
+          )}
         </div>
         <div className="button-box">
-          {currentIndex !== 2 && 
-            <a className="next" href='javascript:void(0)' onClick={handleNextClick}>
+          {currentIndex !== photos.length - 1 && (
+            <button className="next" onClick={handleNextClick}>
               <img src={Next} alt="Next" />
-            </a>
-          }
+            </button>
+          )}
         </div>
       </div>
     </div>

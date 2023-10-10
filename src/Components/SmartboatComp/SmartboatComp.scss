@@ -1,59 +1,53 @@
-// components/Header/Header.scss
+// components/SmartboatComp/SmartboatComp.scss
+body {
+  background: #EDDEA4;
+}
+
 .smartboatcomps {
-    display: flex;
-    position: relative;
-    justify-content: center;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  margin: 4vh 0;
+  padding: -2vw 0;
+
+  .carousel-container {
+    overflow: hidden;
     width: 100%;
-    margin: 4vh 0;
-    padding: -2vw 0;
-    
-    .transition-right {
-        animation: fadeinRight 0.5s ease-in-out;
-      }
-      
-      .transition-left {
-        animation: fadeinLeft 0.5s ease-in-out;
-      }
-      
-      @keyframes fadeinRight {
-        0% {
-          transform: translateX(0);
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      
-      @keyframes fadeinLeft {
-        0% {
-          transform: translateX(0);
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-    
-    .button-box {
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-page {
+    flex: 0 0 100%;
+  }
+
+  .carousel-image {
+    width: 100%;
+  }
+
+  .button-box {
+    width: 4vw;
+  }
+
+  .button-container {
+    display: flex;
+    position: absolute;
+    top: 92%;
+    left: 85%;
+    * {
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+      border: 0;
+      img {
         width: 4vw;
+      }
     }
-
-    .button-container {
-        display: flex;
-        position: absolute;
-        top: 92%;
-        left: 85%;
-        * {
-            padding: 0;
-        }
-
-        .next, .prev {
-            background-color: transparent;
-            border: 0;
-            img {
-                width: 4vw;
-            }
-        }
-    }
+  }
 }
