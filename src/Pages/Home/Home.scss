@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Galindo&display=swap');
+body {
+    overflow-x: hidden;
+}
+
 .home {
     background-image: url('../../assets/background-pics.png'); 
     background-color: #f8f8f8;
@@ -16,6 +20,37 @@
         line-height: normal;
         letter-spacing: 40px;
         padding-bottom: 140vh;
+    }
+
+    .messages {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .carousel-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35vw;
+            height: 30vw;
+            flex-shrink: 0;
+            background: #B5E1FA;
+
+            p {
+                color: #000;
+                font-family: 'Poppins';
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+
+        .carousel {
+            position: absolute;
+            left: 30vw;
+            width: 100%;
+        }
     }
 
     .partners {

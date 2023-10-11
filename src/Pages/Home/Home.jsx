@@ -3,6 +3,7 @@ import './Home.scss'
 import Partners from "../../assets/partners.png";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import HomeCarousel from "../../Components/HomeCarousel/HomeCarousel";
 
 function Home(){
     return(
@@ -12,11 +13,13 @@ function Home(){
             <h1>SMARTBOAT</h1>
             
             {/* Carrousel Components */}
-            <div className="carrousel-side">
-                A
-            </div>
-            <div className="carrousel" id="carrousel">
-                B
+            <div className="messages">
+                <div className="carousel-side">
+                    <p>Apa yang Mereka<br/> Katakan tentang<br/> Smart Boat?</p>
+                </div>
+                <div className="carousel" id="carousel">
+                    <HomeCarousel/>
+                </div>
             </div>
 
             {/* Partner Part */}

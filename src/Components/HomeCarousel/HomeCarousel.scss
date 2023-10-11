@@ -1,0 +1,20 @@
+.home-carousel {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    align-items: center; /* Center align the cards vertically */
+    justify-content: space-between; /* Create space on the sides */
+  
+    .card-container {
+      display: flex;
+      transition: transform 1s ease;
+      width: 460px; 
+      gap: 5vw;
+    }
+  
+    .card:last-child {
+      margin-right: 0;
+    }
+  }
+  
