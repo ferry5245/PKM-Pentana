@@ -16,7 +16,7 @@ function Header() {
           <Link to="/">Beranda</Link>
           <Link to="/smartboat">Tentang Smartboat</Link>
           <Link to="/tracking">Pelacakan Nelayan</Link>
-          <Link to="/">Hubungi Kami</Link>
+          {/* <Link to="/">Hubungi Kami</Link> */}
         </div>
     </header>
   );

@@ -31,7 +31,7 @@ function SmartboatComp() {
             <div
               key={index}
               className="carousel-page"
-            >
+              >
               <img
                 className="carousel-image"
                 src={photo}

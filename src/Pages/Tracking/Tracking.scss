@@ -16,7 +16,37 @@
         line-height: normal;
         letter-spacing: 5px;
         text-align: center;
-        padding-bottom: 140vh;
+    }
+
+    .map-holder {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 80vh;
+    }
+    
+
+    .boat-data {
+        display: flex;
+        flex-direction: row;
+        padding: 5%;
+        gap: 3vw;
+        .boat-datas {
+            border-radius: 82px;
+            background: #F7A172;
+            padding: 5%;
+            width: 100%;
+
+            p {
+                color: #000;
+                font-family: 'Poppins';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                padding: 0;
+            }
+        }
     }
 
     .partners {

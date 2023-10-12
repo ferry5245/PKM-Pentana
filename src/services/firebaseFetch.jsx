@@ -18,20 +18,6 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getDatabase(firebaseApp);
 
-const getLatestData = (data) => {
-  let latestKey = null;
-  let latestEntry = null;
-
-  for (const key in data) {
-    if (!latestKey || key > latestKey) {
-      latestKey = key;
-      latestEntry = data[key];
-    }
-  }
-
-  return latestEntry;
-};
-
 // Function to fetch the latest data from Firebase Realtime Database
 export const fetchData = async () => {
     try {
