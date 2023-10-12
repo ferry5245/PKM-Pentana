@@ -20,5 +20,8 @@ Buka terminal di VSCode dengan tombol **Ctrl + \`** \
 Lalu ketik `npm update` dan tekan **Enter**
 
 ## **Start Project!!!**
-Finally, silahkan ketik **`npm start`** untuk menjalankan project tersebut
-Selamat, program telah dijalankan pada **Port 3000**
+Finally, silahkan ketik **`npm start`** untuk menjalankan project tersebut \
+Selamat, program telah dijalankan pada **Port 3000**!!!
+
+GOODLUCK PRESENTASINYA SEMUA!!! THANKS FOR HAVING ME YAA!!! :laughing: \
+\- Best regards -FEY
