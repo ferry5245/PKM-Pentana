@@ -23,10 +23,10 @@ function Footer() {
         <div className="hubungi">
           <div>Temukan Kami!</div>
           <div className="list-sosmed">
-            <a href="https://instagram.com">
+            <a href="https://instagram.com/smartboat_pentana" target="_blank">
               <img src={ IG } alt="Bahasa" />
             </a>
-            <a href="https://tiktok.com">
+            <a href="https://www.tiktok.com/@smartboat_pentana" target="_blank">
               <img src={ Tiktok } alt="English" />
             </a>
           </div>
