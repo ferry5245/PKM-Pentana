@@ -29,13 +29,15 @@
     .boat-data {
         display: flex;
         flex-direction: row;
+        justify-self: center;
+        justify-content: center;
         padding: 5%;
         gap: 3vw;
         .boat-datas {
             border-radius: 82px;
             background: #F7A172;
             padding: 5%;
-            width: 100%;
+            min-width: 40vw;
 
             p {
                 color: #000;
