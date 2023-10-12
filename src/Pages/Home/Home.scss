@@ -24,17 +24,18 @@ body {
 
     .messages {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
+        background: #B5E1FA;
+        border-radius: 18px;
+        padding: 2vw;
+        margin: 2vh;
 
         .carousel-side {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 35vw;
-            height: 30vw;
             flex-shrink: 0;
-            background: #B5E1FA;
 
             p {
                 color: #000;
@@ -47,8 +48,8 @@ body {
         }
 
         .carousel {
-            position: absolute;
-            left: 30vw;
+            // position: absolute;
+            // left: 30vw;
             width: 100%;
         }
     }

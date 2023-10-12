@@ -15,7 +15,7 @@ function Home(){
             {/* Carrousel Components */}
             <div className="messages">
                 <div className="carousel-side">
-                    <p>Apa yang Mereka<br/> Katakan tentang<br/> Smart Boat?</p>
+                    <p>Apa yang Mereka Katakan tentang Smart Boat?</p>
                 </div>
                 <div className="carousel" id="carousel">
                     <HomeCarousel/>

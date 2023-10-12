@@ -1,74 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import './HomeCarousel.scss';
-import Cards from '../Cards/Cards'; 
-import Logo from "../../assets/logo.png";
+import React from 'react';
+import './HomeCarousel.scss'
+const Card = (props) => (
+  <div className="card">
+    <img src={props.imgUrl} alt={props.alt || 'Image'} />
+    <div className="card-content">
+      <h2>{props.title}</h2>
+      <p>{props.content}</p>
+    </div>
+  </div>
+);
 
-const cardsData = [
-  {
-    content: 'Lorem ipsum dolor sit amet consectetur. Odio in commodo morbi fringilla sit. Semper porttitor adipiscing aliquet cras a in sed tellus.',
-    name: 'NAMA & PERAN 1',
-    image: Logo,
-  },
-  {
-    content: 'Lorem ipsum dolor sit amet consectetur. Odio in commodo morbi fringilla sit. Semper porttitor adipiscing aliquet cras a in sed tellus.',
-    name: 'NAMA & PERAN 2',
-    image: Logo,
-  },
-  {
-    content: 'Lorem ipsum dolor sit amet consectetur. Odio in commodo morbi fringilla sit. Semper porttitor adipiscing aliquet cras a in sed tellus.',
-    name: 'NAMA & PERAN 3',
-    image: Logo,
-  },
-  {
-    content: 'Lorem ipsum dolor sit amet consectetur. Odio in commodo morbi fringilla sit. Semper porttitor adipiscing aliquet cras a in sed tellus.',
-    name: 'NAMA & PERAN 4',
-    image: Logo,
-  },
-  {
-    content: 'Lorem ipsum dolor sit amet consectetur. Odio in commodo morbi fringilla sit. Semper porttitor adipiscing aliquet cras a in sed tellus.',
-    name: 'NAMA & PERAN 5',
-    image: Logo,
-  },
-];
-
-const cardWidth = 300;
-const gap = 20;
-const visibleCards = 3;
-
-// Create an array to store the cards for smooth sliding
-const extendedCardsData = [...cardsData.slice(-2), ...cardsData, ...cardsData.slice(0, 2)];
+const CardContainer = (props) => (
+  <div className="cards-container">
+    {props.cards.map((card) => (
+      <Card
+        key={card.id} // Add a unique key prop
+        title={card.title}
+        content={card.content}
+        imgUrl={card.imgUrl}
+      />
+    ))}
+  </div>
+);
 
 const HomeCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(2); // Start at the first batch of cards
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((currentIndex + 1) % extendedCardsData.length);
-    }, 4000); // Adjust the interval duration as needed (4 seconds)
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [currentIndex]);
+  const cardsData = [
+    { id: 1, title: 'CARD 1', content: 'Clark Kent', imgUrl: 'https://unsplash.it/200/200' },
+    { id: 2, title: 'CARD 2', content: 'Bruce Wayne', imgUrl: 'https://unsplash.it/201/200' },
+    { id: 3, title: 'CARD 3', content: 'Peter Parker', imgUrl: 'https://unsplash.it/200/201' },
+    { id: 4, title: 'CARD 4', content: 'Tony Stark', imgUrl: 'https://unsplash.it/201/201' },
+    { id: 5, title: 'CARD 5', content: 'Reed Richards', imgUrl: 'https://unsplash.it/202/200' },
+  ];
 
   return (
-    <div className="home-carousel">
-      <div
-        className="card-container"
-        style={{
-          width: `${(cardWidth + gap) * visibleCards}px`,
-          transform: `translateX(-${(currentIndex * (cardWidth + gap))}px)`,
-        }}
-      >
-        {extendedCardsData.map((card, index) => (
-          <Cards
-            key={index}
-            content={card.content}
-            name={card.name}
-            image={card.image}
-          />
-        ))}
-      </div>
+    <div className="container">
+      <CardContainer cards={cardsData} />
     </div>
   );
 };
